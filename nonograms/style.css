@@ -1,0 +1,227 @@
+/* Заголовок */
+.boom {
+    margin: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    font-size: 50px;
+}
+
+/* кнопка */
+
+.btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid balck;
+    border-radius: 30px;
+    width: 180px;
+    height: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    font-size: 30px;
+    background-color: orangered;
+}
+
+/* внешняя граница  */
+
+.outerBoundary {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-80%);
+    position: relative;
+    border: 2px solid black;
+    width: 498px;
+    height: 498px;
+    margin: 150px 120px;
+}
+
+/* игровое поле */
+
+.gameField {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 1px solid black;
+    background-color: white;
+    width: 498px;
+    height: 498px;
+}
+
+.cell {
+    border: 1px solid black;
+    width: 81px;
+    height: 81px;
+    color: transparent;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.cell:first-child {
+    color: black;
+    font-size: 40px;
+}
+
+.row:first-child .cell {
+    color: black;
+    font-size: 40px;
+}
+
+.cell:not(:last-child):nth-child(5n+1) {
+    color: black;
+    font-size: 40px;
+}
+
+
+.win {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px 0;
+    width: 100%;
+    height: 90px;
+    border-radius: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    font-size: 30px;
+    background-color: greenyellow;
+}
+
+/* адаптивный дизайн */
+
+@media (max-width: 500px) {
+    .boom {
+        margin: 10px 0;
+        font-size: 30px;
+    }
+
+    .win {
+        font-size: 20px;
+        height: 60px;
+    }
+
+    .btn {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .outerBoundary {
+        width: 200px;
+        height: 200px;
+        margin: 50px 50px;
+    }
+
+    .gameField {
+        width: 200px;
+        height: 200px;
+    }
+
+    .cell {
+        width: 31.3px;
+        height: 31.3px;
+        font-size: 20px;
+    }
+
+    .cell:first-child {
+        font-size: 20px;
+    }
+
+    .row:first-child .cell {
+        font-size: 20px;
+    }
+
+    .cell:not(:last-child):nth-child(5n+1) {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+    .boom {
+        margin: 15px 0;
+        font-size: 35px;
+    }
+
+    .btn {
+        width: 150px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .outerBoundary {
+        width: 300px;
+        height: 300px;
+        margin: 75px 75px;
+    }
+
+    .gameField {
+        width: 300px;
+        height: 300px;
+    }
+
+    .cell {
+        width: 48px;
+        height: 48px;
+        font-size: 25px;
+    }
+
+    .cell:first-child {
+        font-size: 25px;
+    }
+
+    .row:first-child .cell {
+        font-size: 25px;
+    }
+
+    .cell:not(:last-child):nth-child(5n+1) {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .boom {
+        margin: 20px 0;
+        font-size: 40px;
+    }
+
+    .btn {
+        width: 200px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    .outerBoundary {
+        width: 400px;
+        height: 400px;
+        margin: 100px 100px;
+    }
+
+    .gameField {
+        width: 400px;
+        height: 400px;
+    }
+
+    .cell {
+        width: 64.6px;
+        height: 64.6px;
+        font-size: 30px;
+    }
+
+    .cell:first-child {
+        font-size: 30px;
+    }
+
+    .row:first-child .cell {
+        font-size: 30px;
+    }
+
+    .cell:not(:last-child):nth-child(5n+1) {
+        font-size: 30px;
+    }
+}
